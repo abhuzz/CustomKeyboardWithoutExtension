@@ -62,11 +62,7 @@ class ViewController: UIViewController {
     }
     
     func closeShushiWindow() {
-        // ウインドウのRootViewControllerを破棄
-        sushiWindow?.rootViewController?.view.removeFromSuperview()
-        sushiWindow?.rootViewController = nil
-        
-        // ウインドウを破棄
+        // サブウインドウを破棄
         objc_setAssociatedObject(UIApplication.sharedApplication(), &sushiWindowKey, nil, UInt(OBJC_ASSOCIATION_RETAIN_NONATOMIC))
         sushiWindow = nil
         
@@ -101,6 +97,6 @@ class ViewController: UIViewController {
     @IBAction func hideKeyboard(sender: AnyObject) {
         textField.resignFirstResponder()
     }
-
+    
 }
 
