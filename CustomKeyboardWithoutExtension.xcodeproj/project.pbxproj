@@ -407,6 +407,7 @@
 				F60D4A7D1A399A6400F5B405 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F60D4A7E1A399A6400F5B405 /* Build configuration list for PBXNativeTarget "CustomKeyboardWithoutExtensionTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +416,7 @@
 				F60D4A801A399A6400F5B405 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jMb-OO-5bo">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CustomKeyboardWithoutExtension-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomKeyboardWithoutExtension" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,26 +16,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUh-vD-RDK">
-                                <rect key="frame" x="260" y="232" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EUh-vD-RDK">
+                                <rect key="frame" x="150" y="100" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jt0-CI-VbP"/>
+                                    <constraint firstAttribute="width" constant="300" id="qil-OV-lUo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rj5-OG-14Y">
-                                <rect key="frame" x="62" y="111" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuV-qp-3jf">
+                                <rect key="frame" x="249" y="160" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="Xfe-T5-Nz7"/>
+                                    <constraint firstAttribute="height" constant="30" id="bRf-XY-Sf1"/>
+                                </constraints>
+                                <state key="normal" title="Hide Keyboard">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0x-8G-HpQ"/>
+                                    <action selector="hideKeyboard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yvx-7M-frh"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EUh-vD-RDK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="A5E-AG-28p"/>
+                            <constraint firstItem="iuV-qp-3jf" firstAttribute="top" secondItem="EUh-vD-RDK" secondAttribute="bottom" constant="30" id="Cvg-KE-6Vp"/>
+                            <constraint firstAttribute="centerX" secondItem="EUh-vD-RDK" secondAttribute="centerX" id="LTx-Lp-TzQ"/>
+                            <constraint firstAttribute="centerX" secondItem="iuV-qp-3jf" secondAttribute="centerX" id="eHN-RU-ckp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="CustomKeyboardWithoutExtension" id="4Ka-iT-FPY"/>
+                    <connections>
+                        <outlet property="textField" destination="EUh-vD-RDK" id="JDA-eQ-694"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="898" y="274"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rfF-ub-Ak7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jMb-OO-5bo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZBy-oE-kQy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Io6-Na-BoR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZv-lj-yLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-322" y="225"/>
         </scene>
     </scenes>
 </document>
